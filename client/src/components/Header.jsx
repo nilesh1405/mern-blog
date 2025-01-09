@@ -34,14 +34,14 @@ function Header() {
             <Navbar.Toggle/>
         </div>
         <Navbar.Collapse>
-            <Navbar.Link active={path === '/home'}>
-                <Link to='/home'>Home</Link>
+            <Navbar.Link as={Link} to="/home" active={path === '/home'}>
+                Home
             </Navbar.Link>
-            <Navbar.Link active={path === '/about'}>
-                <Link to='/about'>About</Link>
+            <Navbar.Link as={Link} to="/about" active={path === '/about'}>
+                About
             </Navbar.Link>
-            <Navbar.Link active={path === '/projects'}>
-                <Link to='/projects'>Projects</Link>
+            <Navbar.Link as={Link} to="/projects" active={path === '/projects'}>
+                Projects
             </Navbar.Link>
         </Navbar.Collapse>
     </Navbar>
