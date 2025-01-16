@@ -13,11 +13,14 @@ import ThemeProvider from './components/ThemeProvider.jsx';
 import {store , persistor} from './redux/Store.js'
 import {Provider} from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react';
+import PrivateRoute from './components/PrivateRoute.jsx';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />}>
       <Route path='' element={<Home />} />
-      <Route path='dashboard' element={<Dashboard />} />
+      <Route element={<PrivateRoute/>}>
+        <Route path='dashboard' element={<Dashboard />} />
+      </Route>
       <Route path='about' element={<About />} />
       <Route path='projects' element={<Projects />} />
       <Route path='sign-in' element={<SignIn />} />
